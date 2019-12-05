@@ -16,8 +16,8 @@ client = TelegramClient(credentials.phone, credentials.api_id, credentials.api_h
 # telegram session login and otp
 client.connect()
 if not client.is_user_authorized():
-	client.send_code_request(phone)
-	client.sign_in(phone, input('Enter OTP code: '))
+	client.send_code_request(credentials.phone)
+	client.sign_in(credentials.phone, input('Enter OTP code: '))
 
 
 # get current groups
