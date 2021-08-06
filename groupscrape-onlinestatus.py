@@ -101,4 +101,4 @@ with open(filepath,"w",encoding='UTF-8') as f:
 print(str(target_group.title) + ' Members scraped successfully. \n')
 
 # print output csv name
-print('Created CSV: ' + str(filepath) +'.')
+print('Created User CSV: ' + str(filepath) +'.')
