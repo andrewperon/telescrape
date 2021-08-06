@@ -79,7 +79,7 @@ if not os.path.isdir(directory):
 
 
 # save group member details
-print('Saving In file... \n')
+print('Saving Group Details to file... \n')
 with open(filepath,"w",encoding='UTF-8') as f:
     writer = csv.writer(f,delimiter=",",lineterminator="\n")
     writer.writerow(['username','user id', 'access hash','name','group', 'group id','onlinestatus'])
