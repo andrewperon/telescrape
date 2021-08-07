@@ -61,6 +61,10 @@ cleantitle = slugify(target_group.title)
 
 print("Scraping " + str(cleantitle) + "... \n")
 
+'''
+uncommenting below will allow you to specify a file prefix for the csv export.
+'''
+
 # csv_name = input("Enter output file name: ") + "_" + timestamp + ".csv"
 csv_name = "csv/" + str(cleantitle) + "_" + timestamp + ".csv"
 
