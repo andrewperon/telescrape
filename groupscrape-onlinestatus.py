@@ -10,7 +10,6 @@ from slugify import slugify
 timestamp = time.strftime("%Y%m%d-%H%M%S")
 
 # log in to telegram api
-
 client = TelegramClient(credentials.phone, credentials.api_id, credentials.api_hash)
 
 # telegram session login and otp
@@ -51,7 +50,7 @@ for g in groups:
     print(str(i) + '- ' + g.title)
     i+=1
 
-g_index = input("\n Enter a Number: ")
+g_index = input("\n Enter a Group Number: ")
 target_group=groups[int(g_index)]
 
 print("Configuring Scrape for " + str(target_group.title) + ": ")
@@ -65,7 +64,6 @@ print("Scraping from group " + str(cleantitle) + "... \n")
 uncommenting below will allow you to specify a file prefix for the csv export.
 '''
 
-# csv_name = input("Enter output file name: ") + "_" + timestamp + ".csv"
 csv_name = "csv/" + str(cleantitle) + "_" + timestamp + ".csv"
 
 # get group members and details
