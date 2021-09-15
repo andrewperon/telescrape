@@ -59,7 +59,7 @@ print("Configuring Scrape for " + str(target_group.title) + ": ")
 # clean group name for file save
 cleantitle = slugify(target_group.title)
 
-print("Scraping " + str(cleantitle) + "... \n")
+print("Scraping from group " + str(cleantitle) + "... \n")
 
 '''
 uncommenting below will allow you to specify a file prefix for the csv export.
@@ -69,7 +69,7 @@ uncommenting below will allow you to specify a file prefix for the csv export.
 csv_name = "csv/" + str(cleantitle) + "_" + timestamp + ".csv"
 
 # get group members and details
-print('Fetching Members... \n')
+print('Fetching Members from group... \n')
 all_participants = []
 all_participants = client.get_participants(target_group, aggressive=True)
 
@@ -83,7 +83,7 @@ if not os.path.isdir(directory):
 
 
 # save group member details
-print('Saving Group Details to file... \n')
+print('Saving Group Details to CSV... \n')
 with open(filepath,"w",encoding='UTF-8') as f:
     writer = csv.writer(f,delimiter=",",lineterminator="\n")
     writer.writerow(['username','user id', 'access hash','name','group', 'group id','onlinestatus'])
