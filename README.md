@@ -1,6 +1,6 @@
 # telescrape
 
-A python tool to scrape Telegram users from supergroups.
+A python tool to scrape Telegram users from supergroups. Supports persistent sessions and 2FA login.
 
 Requires **telethon** ([https://github.com/LonamiWebs/Telethon](https://github.com/LonamiWebs/Telethon)) for interfacing with Telegram APIs and **python-slugify**. This tool allows you to scrape username, userid, groupid, and more from supergroups to CSV for further analysis and use.
 
