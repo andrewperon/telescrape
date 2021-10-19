@@ -64,7 +64,7 @@ print("Scraping from group " + str(cleantitle) + "... \n")
 uncommenting below will allow you to specify a file prefix for the csv export.
 '''
 
-csv_name = "csv/" + str(cleantitle) + "_" + timestamp + ".csv"
+csvname = "csv/" + str(cleantitle) + "_" + timestamp + ".csv"
 
 # get group members and details
 print('Fetching Members from group... \n')
@@ -75,7 +75,7 @@ all_participants = client.get_participants(target_group, aggressive=True)
 # check for csv directory and create if needed
 directory = './csv/'
 currdir = os.getcwd()
-filepath = os.path.join(currdir, csv_name)
+filepath = os.path.join(currdir, csvname)
 if not os.path.isdir(directory):
     os.mkdir(directory)
 
